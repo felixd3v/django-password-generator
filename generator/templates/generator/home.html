@@ -1,1 +1,13 @@
 <h1>Password Generator</h1>
+
+<form action="{% url 'pw' %}">
+    <select name="length">
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+    </select>
+
+    <input type="submit" value="Click to View your Password">
+</form>
