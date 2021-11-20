@@ -8,6 +8,9 @@ import random
 def home(request):
     return render(request, 'generator/home.html')
 
+def about(request):
+    return render(request, 'generator/about.html')
+
 def pw(request):
     
     letters = list('abcdefghijklmnopqrstuvxywz')
@@ -22,7 +25,7 @@ def pw(request):
         letters.extend(list('0123456789'))   
 
     length = int(request.GET.get('length', 16))
-    
+
     user_password = ''
     for item in range(length):
         user_password = user_password + random.choice(letters)
